@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cyclone_II_EP2C8Q208
+namespace Cyclone_II_EP2C8Q208.Misc
 {
-    public class Class1
+    class InputFileHandler
     {
     }
 }
