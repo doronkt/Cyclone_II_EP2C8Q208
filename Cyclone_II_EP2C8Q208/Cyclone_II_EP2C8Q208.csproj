@@ -41,15 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="driver.cs" />
-    <Compile Include="FIR.cs" />
-    <Compile Include="IIR.cs" />
-    <Compile Include="InputFileHandler.cs" />
-    <Compile Include="LCD1602.cs" />
-    <Compile Include="LED.cs" />
+    <Compile Include="DSP\FIR.cs" />
+    <Compile Include="DSP\IIR.cs" />
+    <Compile Include="Misc\InputFileHandler.cs" />
+    <Compile Include="IO\LCD1602.cs" />
+    <Compile Include="IO\LED.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SSD_LED.cs" />
-    <Compile Include="USB_TTL.cs" />
+    <Compile Include="IO\SSD_LED.cs" />
+    <Compile Include="Communication\USB_TTL.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
