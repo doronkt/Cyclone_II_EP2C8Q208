@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element BCD_0
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element clk_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element master_0
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="EP2C8Q208C8" />
+ <parameter name="deviceFamily" value="Cyclone II" />
+ <parameter name="deviceSpeedGrade" value="8" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="1" />
+ <parameter name="timeStamp" value="1512321678328" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface name="bcd_io" internal="BCD_0.IO" type="conduit" dir="end" />
+ <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   kind="altera_jtag_avalon_master"
+   version="13.0"
+   enabled="1"
+   name="master_0">
+  <parameter name="USE_PLI" value="0" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="COMPONENT_CLOCK" value="0" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
+  <parameter name="AUTO_DEVICE" value="EP2C8Q208C8" />
+ </module>
+ <module kind="BCD" version="1.0" enabled="1" name="BCD_0">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+ </module>
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="BCD_0.clock" />
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="master_0.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="master_0.clk_reset" />
+ <connection kind="reset" version="13.0" start="clk_0.clk_reset" end="BCD_0.reset" />
+ <connection kind="avalon" version="13.0" start="master_0.master" end="BCD_0.avmm">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

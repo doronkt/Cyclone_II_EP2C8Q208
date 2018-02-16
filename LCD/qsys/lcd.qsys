@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="System" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element $${FILENAME}
+   {
+   }
+   element LCD_Driver_0
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element clk_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element interrupt_sink_0
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element master_0
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element uart_0
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="EP2C8Q208C8" />
+ <parameter name="deviceFamily" value="Cyclone II" />
+ <parameter name="deviceSpeedGrade" value="8" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="1" />
+ <parameter name="timeStamp" value="1514921911710" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="lcd_driver_0_io"
+   internal="LCD_Driver_0.io"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="uart_0_external_connection"
+   internal="uart_0.external_connection"
+   type="conduit"
+   dir="end" />
+ <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   kind="altera_jtag_avalon_master"
+   version="13.0"
+   enabled="1"
+   name="master_0">
+  <parameter name="USE_PLI" value="0" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="COMPONENT_CLOCK" value="0" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
+  <parameter name="AUTO_DEVICE" value="EP2C8Q208C8" />
+ </module>
+ <module kind="LCD_Driver" version="1.0" enabled="1" name="LCD_Driver_0" />
+ <module
+   kind="altera_avalon_uart"
+   version="13.0.1.99.2"
+   enabled="1"
+   name="uart_0">
+  <parameter name="baud" value="115200" />
+  <parameter name="dataBits" value="8" />
+  <parameter name="fixedBaud" value="true" />
+  <parameter name="parity" value="NONE" />
+  <parameter name="simCharStream" value="" />
+  <parameter name="simInteractiveInputEnable" value="false" />
+  <parameter name="simInteractiveOutputEnable" value="false" />
+  <parameter name="simTrueBaud" value="false" />
+  <parameter name="stopBits" value="1" />
+  <parameter name="syncRegDepth" value="2" />
+  <parameter name="useCtsRts" value="false" />
+  <parameter name="useEopRegister" value="false" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <module
+   kind="altera_avalon_interrupt_sink"
+   version="13.0"
+   enabled="1"
+   name="interrupt_sink_0">
+  <parameter name="ASSERT_HIGH_IRQ" value="1" />
+  <parameter name="AV_IRQ_W" value="1" />
+  <parameter name="ASYNCHRONOUS_INTERRUPT" value="0" />
+  <parameter name="VHDL_ID" value="0" />
+ </module>
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="master_0.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="master_0.clk_reset" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="master_0.master"
+   end="LCD_Driver_0.avalon_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="LCD_Driver_0.reset_n" />
+ <connection
+   kind="clock"
+   version="13.0"
+   start="clk_0.clk"
+   end="LCD_Driver_0.sys_clk_50M" />
+ <connection kind="clock" version="13.0" start="clk_0.clk" end="uart_0.clk" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="uart_0.reset" />
+ <connection kind="avalon" version="13.0" start="master_0.master" end="uart_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0100" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="clock"
+   version="13.0"
+   start="clk_0.clk"
+   end="interrupt_sink_0.clock_reset" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="interrupt_sink_0.clock_reset_reset" />
+ <connection
+   kind="interrupt"
+   version="13.0"
+   start="interrupt_sink_0.irq"
+   end="uart_0.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

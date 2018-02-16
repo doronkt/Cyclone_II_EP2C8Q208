@@ -1,0 +1,178 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Altera/Projects/LCD/sim
+Elcd_clk_gen
+Z1 w1514658112
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8D:/Altera/Projects/LCD/hdl/lcd_clk_gen.vhd
+Z6 FD:/Altera/Projects/LCD/hdl/lcd_clk_gen.vhd
+l0
+L6
+V]=hKOT>aj0CWQLJPC1mo=2
+!s100 SQcW<3Jlh9@nm?@9AdaNf3
+Z7 OP;C;10.4a;61
+32
+Z8 !s110 1514658120
+!i10b 1
+Z9 !s108 1514658120.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/Altera/Projects/LCD/hdl/lcd_clk_gen.vhd|
+Z11 !s107 D:/Altera/Projects/LCD/hdl/lcd_clk_gen.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+Abeh
+R2
+R3
+R4
+DEx4 work 11 lcd_clk_gen 0 22 ]=hKOT>aj0CWQLJPC1mo=2
+l22
+L16
+VgC]ahePDcQ@d_9;0nz5JV3
+!s100 Z63:0Ynk33@>T>6iKD[OZ1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Elcd_driver
+Z14 w1515182926
+R2
+R3
+R4
+R0
+Z15 8../hdl/LCD_DRIVER.vhd
+Z16 F../hdl/LCD_DRIVER.vhd
+l0
+L6
+VjK5QHEQ[4kDbBh<U;CVPO1
+!s100 0iTUJ3kM_X>F8mZ2bJnoD1
+R7
+33
+Z17 !s110 1515183240
+!i10b 1
+Z18 !s108 1515183240.000000
+Z19 !s90 -reportprogress|300|-2008|-work|work|../hdl/LCD_DRIVER.vhd|
+Z20 !s107 ../hdl/LCD_DRIVER.vhd|
+!i113 1
+Z21 o-2008 -work work -O0
+R13
+Abeh
+R2
+R3
+R4
+Z22 DEx4 work 10 lcd_driver 0 22 jK5QHEQ[4kDbBh<U;CVPO1
+l64
+L26
+Z23 V`;lZJbd3gfA0FR=RaJzHK0
+Z24 !s100 6oYj_G2>9<Nz5]:V:CoZJ2
+R7
+33
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R21
+R13
+Estimulus
+Z25 w1515183204
+Z26 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R2
+R3
+R4
+R0
+Z27 8D:/Altera/Projects/LCD/sim/stimulus.vhd
+Z28 FD:/Altera/Projects/LCD/sim/stimulus.vhd
+l0
+L9
+VGKdzzL0bloGMoE4RY3Pmf2
+!s100 E]@fRTnd5[h[=`Ec2QQSS1
+R7
+33
+R17
+!i10b 1
+R18
+Z29 !s90 -reportprogress|300|-2008|-work|work|D:/Altera/Projects/LCD/sim/stimulus.vhd|
+Z30 !s107 D:/Altera/Projects/LCD/sim/stimulus.vhd|
+!i113 1
+R21
+R13
+Astim
+R26
+R2
+R3
+R4
+DEx4 work 8 stimulus 0 22 GKdzzL0bloGMoE4RY3Pmf2
+l41
+L26
+VIImYH1UWP?WjBzzJCh?Xj0
+!s100 IA00l_eENa39R;DT2[2Wd2
+R7
+33
+R17
+!i10b 1
+R18
+R29
+R30
+!i113 1
+R21
+R13
+Etestbench
+Z31 w1515183231
+R26
+R2
+R3
+R4
+R0
+Z32 8D:/Altera/Projects/LCD/sim/testbench.vhd
+Z33 FD:/Altera/Projects/LCD/sim/testbench.vhd
+l0
+L10
+V6>nkb@D;bBB>]5eHcDOS10
+!s100 ;Kkl[iFAETld9nh5FmC3>2
+R7
+33
+R17
+!i10b 1
+R18
+Z34 !s90 -reportprogress|300|-2008|-work|work|D:/Altera/Projects/LCD/sim/testbench.vhd|
+Z35 !s107 D:/Altera/Projects/LCD/sim/testbench.vhd|
+!i113 1
+R21
+R13
+Astruct
+R26
+R2
+R3
+R4
+DEx4 work 9 testbench 0 22 6>nkb@D;bBB>]5eHcDOS10
+l63
+L13
+VKGDUMbj`4`PPi8Kene2Vi0
+!s100 Aa_WF;`;[^[BM;TnF_k<Q2
+R7
+33
+R17
+!i10b 1
+R18
+R34
+R35
+!i113 1
+R21
+R13

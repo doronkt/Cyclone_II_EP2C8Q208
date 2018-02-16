@@ -1,0 +1,22 @@
+D:/Altera/Projects/LCD/sim/testbench.vhd {0 {vcom -work work -2002 -explicit D:/Altera/Projects/LCD/sim/testbench.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+Start time: 23:14:27 on Dec 20,2017
+vcom -reportprogress 300 -work work -2002 -explicit D:/Altera/Projects/LCD/sim/testbench.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Compiling entity testbench
+-- Compiling architecture struct of testbench
+-- Loading entity LCD_DRIVER
+** Error (suppressible): D:/Altera/Projects/LCD/sim/testbench.vhd(26): (vcom-1141) Identifier "LCD_DRIVER" does not identify a component declaration.
+
+-- Loading entity stimulus
+** Error (suppressible): D:/Altera/Projects/LCD/sim/testbench.vhd(40): (vcom-1141) Identifier "stimulus" does not identify a component declaration.
+
+** Error: D:/Altera/Projects/LCD/sim/testbench.vhd(53): VHDL Compiler exiting
+End time: 23:14:27 on Dec 20,2017, Elapsed time: 0:00:00
+Errors: 3, Warnings: 0
+
+} {18.0 19.0} {}}

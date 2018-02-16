@@ -1,0 +1,117 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Altera/Projects/BCD/sim
+Elcd_driver
+Z0 w1513803677
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dD:/Altera/Projects/LCD/sim
+Z5 8D:/Altera/Projects/LCD/hdl/LCD_DRIVER.vhd
+Z6 FD:/Altera/Projects/LCD/hdl/LCD_DRIVER.vhd
+l0
+L6
+VBl_@C67Zl1_[RY^8da39?1
+!s100 >JjE27J:z1Xz::Y<8i[E92
+Z7 OP;C;10.4a;61
+32
+Z8 !s110 1513804467
+!i10b 1
+Z9 !s108 1513804467.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Altera/Projects/LCD/hdl/LCD_DRIVER.vhd|
+Z11 !s107 D:/Altera/Projects/LCD/hdl/LCD_DRIVER.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+Abeh
+R1
+R2
+R3
+DEx4 work 10 lcd_driver 0 22 Bl_@C67Zl1_[RY^8da39?1
+l42
+L24
+VE3WBd<jhzn:U704dR`M=n2
+!s100 aJzaFJ82SiaR7I`ZUHE]W0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Estimulus
+Z14 w1513804305
+Z15 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R1
+R2
+R3
+R4
+Z16 8stimulus.vhd
+Z17 Fstimulus.vhd
+l0
+L9
+VZd=`ckkfci_bjk3ADdZAg1
+!s100 KI]8gh<7b0hP>E[HNQTeQ2
+R7
+33
+Z18 !s110 1513875946
+!i10b 1
+Z19 !s108 1513875946.000000
+Z20 !s90 -reportprogress|300|stimulus.vhd|-2008|
+Z21 !s107 stimulus.vhd|
+!i113 1
+Z22 o-2008 -O0
+R13
+Astim
+R15
+R1
+R2
+R3
+DEx4 work 8 stimulus 0 22 Zd=`ckkfci_bjk3ADdZAg1
+l39
+L26
+V_Z8A4RU4A@1R6Ao<aQXnQ3
+Z23 !s100 dILDMl]KXbSW0W4EUGc[V2
+R7
+33
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R22
+R13
+Etestbench
+w1513804425
+R15
+R1
+R2
+R3
+R4
+8D:/Altera/Projects/LCD/sim/testbench.vhd
+FD:/Altera/Projects/LCD/sim/testbench.vhd
+l0
+L10
+VO2>FkXe]kcPgdlVFC_BhC0
+!s100 ;Kkl[iFAETld9nh5FmC3>2
+R7
+32
+R8
+!i10b 1
+R9
+!s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Altera/Projects/LCD/sim/testbench.vhd|
+!s107 D:/Altera/Projects/LCD/sim/testbench.vhd|
+!i113 1
+R12
+R13

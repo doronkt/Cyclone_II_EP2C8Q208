@@ -1,0 +1,31 @@
+# system info bcd on 2017.12.02.08:33:15
+system_info:
+name,value
+DEVICE,EP2C8Q208C8
+DEVICE_FAMILY,Cyclone II
+GENERATION_ID,1512196394
+#
+#
+# Files generated for bcd on 2017.12.02.08:33:15
+files:
+filepath,kind,attributes,module,is_top
+bcd/simulation/bcd.vhd,VHDL,,bcd,true
+bcd/simulation/submodules/bcd_master_0.vhd,VHDL,,bcd_master_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+bcd.master_0,bcd_master_0
+bcd.master_0.jtag_phy_embedded_in_jtag_master,bcd_master_0_jtag_phy_embedded_in_jtag_master
+bcd.master_0.timing_adt,bcd_master_0_timing_adt
+bcd.master_0.fifo,bcd_master_0_fifo
+bcd.master_0.b2p,bcd_master_0_b2p
+bcd.master_0.p2b,bcd_master_0_p2b
+bcd.master_0.transacto,bcd_master_0_transacto
+bcd.master_0.b2p_adapter,bcd_master_0_b2p_adapter
+bcd.master_0.p2b_adapter,bcd_master_0_p2b_adapter
+bcd.master_0.rst_controller,altera_reset_controller
+bcd.BCD_0,bcd_BCD_0
+bcd.master_0_master_translator,altera_merlin_master_translator
+bcd.BCD_0_avmm_translator,altera_merlin_slave_translator
+bcd.rst_controller,altera_reset_controller

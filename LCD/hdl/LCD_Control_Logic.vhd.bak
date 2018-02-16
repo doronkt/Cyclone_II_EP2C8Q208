@@ -1,0 +1,42 @@
+library IEEE;
+
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity lcd_translator is
+port(
+
+);
+end lcd_translator;
+
+architecture arc of lcd_translator is
+-- component
+
+-- signals
+
+begin
+
+end arc;
+
+
+library IEEE;
+
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity LCD_Control_Logic is
+port(
+
+);
+end LCD_Control_Logic;
+
+architecture arc of LCD_Control_Logic is
+-- component
+
+-- signals
+
+begin
+
+end arc;
+
+

@@ -1,0 +1,217 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Altera/Projects/BCD/sim
+Ebcd_digit
+Z1 w1511897925
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8D:\Altera\Projects\BCD\hdl\BCD_digit.vhd
+Z6 FD:\Altera\Projects\BCD\hdl\BCD_digit.vhd
+l0
+L11
+VfDOR?1I;RVN=_T@adb:GX1
+!s100 XHP;5I_>EOfCoRb8z7TAN2
+Z7 OP;C;10.4a;61
+32
+Z8 !s110 1511898139
+!i10b 1
+Z9 !s108 1511898139.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\Altera\Projects\BCD\hdl\BCD_digit.vhd|
+Z11 !s107 D:\Altera\Projects\BCD\hdl\BCD_digit.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+Adecoder_beh
+R2
+R3
+R4
+DEx4 work 9 bcd_digit 0 22 fDOR?1I;RVN=_T@adb:GX1
+l24
+L22
+VVV5c>EnY>2bOf[oZ<Hjgg1
+!s100 ScOS3VH_Y>RA@zzezOCCP0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ebcd_digit_tb
+Z14 w1509909723
+R2
+R3
+R4
+R0
+Z15 8D:/Altera/Projects/BCD/sim/BCD_digit_tb.vhd
+Z16 FD:/Altera/Projects/BCD/sim/BCD_digit_tb.vhd
+l0
+L11
+VV1iP6iK2HkbX]FR`P9aJn2
+!s100 DBAN9G9[:9:jWB^Wm:H4B2
+R7
+32
+Z17 !s110 1511891488
+!i10b 1
+Z18 !s108 1511891488.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Altera/Projects/BCD/sim/BCD_digit_tb.vhd|
+Z20 !s107 D:/Altera/Projects/BCD/sim/BCD_digit_tb.vhd|
+!i113 1
+R12
+R13
+Atb
+R2
+R3
+R4
+DEx4 work 12 bcd_digit_tb 0 22 V1iP6iK2HkbX]FR`P9aJn2
+l33
+L20
+Vbd6:RHB5H8ZS>jd^6i9fQ2
+!s100 VTAPn:lBnHSABePE:WVB_1
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Ebcd_top
+Z21 w1511898017
+R2
+R3
+R4
+R0
+Z22 8D:/Altera/Projects/BCD/hdl/BCD_top.vhd
+Z23 FD:/Altera/Projects/BCD/hdl/BCD_top.vhd
+l0
+L11
+VQYLPMZXlRWF@N;<PC@DHM3
+!s100 IbQbSlj3UHPNZGLYXE8bV1
+R7
+32
+R8
+!i10b 1
+R9
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Altera/Projects/BCD/hdl/BCD_top.vhd|
+Z25 !s107 D:/Altera/Projects/BCD/hdl/BCD_top.vhd|
+!i113 1
+R12
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 7 bcd_top 0 22 QYLPMZXlRWF@N;<PC@DHM3
+l43
+L23
+V6DkfTDOWhneXBHD@;iD0G1
+!s100 8YHWnM3[kKMiE]h31RC^K1
+R7
+32
+R8
+!i10b 1
+R9
+R24
+R25
+!i113 1
+R12
+R13
+Estimuli
+Z26 w1511896491
+Z27 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R2
+R3
+R4
+R0
+Z28 8D:/Altera/Projects/BCD/sim/stimuli.vhd
+Z29 FD:/Altera/Projects/BCD/sim/stimuli.vhd
+l0
+L7
+VL[C:bFR06oME];PaXL@:[0
+!s100 KO1X[F=RnP1A5KE?CCA=31
+R7
+33
+Z30 !s110 1511898150
+!i10b 1
+Z31 !s108 1511898150.000000
+Z32 !s90 -reportprogress|300|-2008|D:/Altera/Projects/BCD/sim/stimuli.vhd|
+Z33 !s107 D:/Altera/Projects/BCD/sim/stimuli.vhd|
+!i113 1
+Z34 o-2008 -O0
+R13
+Astim
+R27
+R2
+R3
+R4
+DEx4 work 7 stimuli 0 22 L[C:bFR06oME];PaXL@:[0
+l22
+L15
+VP3Z=J9D?D42dk0LRnJ14M1
+!s100 l^XG4SX75li;O1T_l]9Y[3
+R7
+33
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R34
+R13
+Etestbench
+Z35 w1511896573
+R2
+R3
+R4
+R0
+Z36 8testbench.vhd
+Z37 Ftestbench.vhd
+l0
+L5
+VB;?N5cY1z]9`ed`O5_eFN3
+!s100 MTAB^bMb96MmMIUN@[1PY3
+R7
+33
+R30
+!i10b 1
+R31
+Z38 !s90 -reportprogress|300|-work|work|-2008|-quiet|testbench.vhd|
+Z39 !s107 testbench.vhd|
+!i113 1
+Z40 o-quiet -work work -2008 -O0
+R13
+Astruct
+R2
+R3
+R4
+DEx4 work 9 testbench 0 22 B;?N5cY1z]9`ed`O5_eFN3
+l36
+L8
+VO6lj3l43[G_3>O8AnB7HK1
+Z41 !s100 i4naBY>FoNMG>6aWnPnPU0
+R7
+33
+R30
+!i10b 1
+R31
+R38
+R39
+!i113 1
+R40
+R13
