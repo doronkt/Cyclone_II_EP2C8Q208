@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2017.10.31.21:08:18"
+ outputDirectory="D:/Altera/Projects/BCD/db/ip/bcd/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone II"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="EP2C8Q208C8"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="50000000" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="" />
+   <property name="synchronousEdges" value="NONE" />
+   <port name="reset_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="bcd_io_bcd_io_pinout" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="" />
+   <port name="bcd_io_bcd_io_pinout_en" direction="output" role="en" width="8" />
+   <port
+       name="bcd_io_bcd_io_pinout_bcd"
+       direction="output"
+       role="bcd"
+       width="8" />
+  </interface>
+  <interface name="bcd_io_error_conduit" kind="conduit" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="" />
+   <port
+       name="bcd_io_error_conduit_error"
+       direction="output"
+       role="error"
+       width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="bcd:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP2C8Q208C8,AUTO_DEVICE_FAMILY=Cyclone II,AUTO_GENERATION_ID=1509476896,AUTO_UNIQUE_ID=(clock_source:13.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_jtag_avalon_master:13.0:AUTO_DEVICE=EP2C8Q208C8,AUTO_DEVICE_FAMILY=Cyclone II,COMPONENT_CLOCK=0,FAST_VER=0,FIFO_DEPTHS=2,PLI_PORT=50000,USE_PLI=0(altera_clock_bridge:13.0:DERIVED_CLOCK_RATE=0,EXPLICIT_CLOCK_RATE=0,NUM_CLOCK_OUTPUTS=1)(altera_reset_bridge:13.0:ACTIVE_LOW_RESET=0,AUTO_CLK_CLOCK_RATE=-1,NUM_RESET_OUTPUTS=1,SYNCHRONOUS_EDGES=none)(altera_jtag_dc_streaming:13.0:AUTO_DEVICE_FAMILY=Cyclone II,COMPONENT_CLOCK=0,DOWNSTREAM_FIFO_SIZE=64,FABRIC=2.0,MGMT_CHANNEL_WIDTH=-1,PLI_PORT=50000,PURPOSE=1,UPSTREAM_FIFO_SIZE=0,USE_DOWNSTREAM_READY=0,USE_PLI=0)(timing_adapter:13.0:generationLanguage=VERILOG,inBitsPerSymbol=8,inChannelWidth=0,inErrorDescriptor=,inErrorWidth=0,inMaxChannel=0,inReadyLatency=0,inSymbolsPerBeat=1,inUseEmpty=false,inUseEmptyPort=NO,inUsePackets=false,inUseReady=false,inUseValid=true,moduleName=,outReadyLatency=0,outUseReady=true,outUseValid=true)(altera_avalon_sc_fifo:13.0:AUTO_DEVICE_FAMILY=Cyclone II,BITS_PER_SYMBOL=8,CHANNEL_WIDTH=0,EMPTY_LATENCY=3,ENABLE_EXPLICIT_MAXCHANNEL=false,ERROR_WIDTH=0,EXPLICIT_MAXCHANNEL=0,FIFO_DEPTH=64,SYMBOLS_PER_BEAT=1,USE_ALMOST_EMPTY_IF=0,USE_ALMOST_FULL_IF=0,USE_FILL_LEVEL=0,USE_MEMORY_BLOCKS=1,USE_PACKETS=0,USE_STORE_FORWARD=0)(altera_avalon_st_bytes_to_packets:11.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone II,CHANNEL_WIDTH=8,CHANNEL_WIDTH_DERIVED=8,ENCODING=0)(altera_avalon_st_packets_to_bytes:11.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone II,CHANNEL_WIDTH=8,CHANNEL_WIDTH_DERIVED=8,ENCODING=0)(altera_avalon_packets_to_master:13.0:AUTO_DEVICE_FAMILY=Cyclone II,EXPORT_MASTER_SIGNALS=0,FAST_VER=0,FIFO_DEPTHS=2,FIFO_WIDTHU=1)(channel_adapter:13.0:generationLanguage=VERILOG,inBitsPerSymbol=8,inChannelWidth=8,inErrorDescriptor=,inErrorWidth=0,inMaxChannel=255,inReadyLatency=0,inSymbolsPerBeat=1,inUseEmpty=false,inUseEmptyPort=AUTO,inUsePackets=true,inUseReady=true,moduleName=,outChannelWidth=0,outMaxChannel=0)(channel_adapter:13.0:generationLanguage=VERILOG,inBitsPerSymbol=8,inChannelWidth=0,inErrorDescriptor=,inErrorWidth=0,inMaxChannel=0,inReadyLatency=0,inSymbolsPerBeat=1,inUseEmpty=false,inUseEmptyPort=AUTO,inUsePackets=true,inUseReady=true,moduleName=,outChannelWidth=8,outMaxChannel=255)(clock:13.0:)(clock:13.0:)(clock:13.0:)(clock:13.0:)(clock:13.0:)(clock:13.0:)(clock:13.0:)(clock:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:))(BCD_IO:1.0:AUTO_CLOCK_CLOCK_RATE=50000000)(clock:13.0:)(reset:13.0:)(clock:13.0:)(reset:13.0:)(avalon:13.0:arbitrationPriority=1,baseAddress=0x0000,defaultConnection=false)"
+   instancePathKey="bcd"
+   kind="bcd"
+   version="1.0"
+   name="bcd">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_DEVICE" value="EP2C8Q208C8" />
+  <parameter name="AUTO_GENERATION_ID" value="1509476896" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/bcd.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_jtag_interface.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_jtag_dc_streaming.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_jtag_sld_node.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_jtag_streaming.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_pli_streaming.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_clock_crosser.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_pipeline_base.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_idle_remover.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_idle_inserter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_jtag_interface.sdc"
+       type="SDC"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0_timing_adt.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_sc_fifo.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_bytes_to_packets.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_packets_to_bytes.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_packets_to_master.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0_b2p_adapter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0_p2b_adapter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/BCD_Avalon_Top.vhd"
+       type="VHDL"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/BCD_digit.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/BCD_top.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_merlin_master_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_merlin_slave_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="D:/Altera/Projects/BCD/qsys/bcd.qsys" attributes="" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_jtag_avalon_master/altera_jtag_avalon_master_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_avalon_st_jtag_interface_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_avalon_st_jtag_interface.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_jtag_dc_streaming.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_jtag_sld_node.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_jtag_streaming.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_pli_streaming.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/avalon_st/altera_avalon_st_handshake_clock_crosser/altera_avalon_st_clock_crosser.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/avalon_st/altera_avalon_st_pipeline_stage/altera_avalon_st_pipeline_base.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_idle_remover/altera_avalon_st_idle_remover.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_idle_inserter/altera_avalon_st_idle_inserter.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_avalon_st_jtag_interface.sdc"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sc_fifo/altera_avalon_sc_fifo_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sc_fifo/altera_avalon_sc_fifo.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_bytes_to_packets/altera_avalon_st_bytes_to_packets_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_bytes_to_packets/altera_avalon_st_bytes_to_packets.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_packets_to_bytes/altera_avalon_st_packets_to_bytes_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_packets_to_bytes/altera_avalon_st_packets_to_bytes.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_packets_to_master/altera_avalon_packets_to_master_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_packets_to_master/altera_avalon_packets_to_master.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl"
+       attributes="" />
+   <file path="D:/Altera/Projects/BCD/BCD_IO_hw.tcl" attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/merlin/altera_merlin_master_translator/altera_merlin_master_translator_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/merlin/altera_merlin_slave_translator/altera_merlin_slave_translator_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl"
+       attributes="" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 0 starting:bcd "bcd"</message>
+   <message level="Debug">Transform: PipelineBridgeSwap</message>
+   <message level="Info" culprit="pipeline_bridge_swap_transform"><![CDATA[After transform: <b>3</b> modules, <b>5</b> connections]]></message>
+   <message level="Debug">Transform: ClockCrossingBridgeSwap</message>
+   <message level="Debug">Transform: QsysBetaIPSwap</message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Info">No custom instruction connections, skipping transform </message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: TranslatorTransform</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Info" culprit="merlin_translator_transform"><![CDATA[After transform: <b>5</b> modules, <b>11</b> connections]]></message>
+   <message level="Debug">Transform: IDPadTransform</message>
+   <message level="Debug">Transform: DomainTransform</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces master_0.master and master_0_master_translator.avalon_anti_master_0</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces master_0_master_translator.avalon_universal_master_0 and BCD_IO_avalon_slave_translator.avalon_universal_slave_0</message>
+   <message level="Debug">Transform merlin_domain_transform not run on matched interfaces BCD_IO_avalon_slave_translator.avalon_anti_slave_0 and BCD_IO.avalon_slave</message>
+   <message level="Debug">Transform: RouterTransform</message>
+   <message level="Debug">Transform: TrafficLimiterTransform</message>
+   <message level="Debug">Transform: BurstTransform</message>
+   <message level="Debug">Transform: CombinedWidthTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Info" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>7</b> modules, <b>15</b> connections]]></message>
+   <message level="Debug">Transform: NetworkToSwitchTransform</message>
+   <message level="Debug">Transform: WidthTransform</message>
+   <message level="Debug">Transform: RouterTableTransform</message>
+   <message level="Debug">Transform: ClockCrossingTransform</message>
+   <message level="Debug">Transform: PipelineTransform</message>
+   <message level="Debug">Transform: TrafficLimiterUpdateTransform</message>
+   <message level="Info" culprit="merlin_mm_transform"><![CDATA[After transform: <b>7</b> modules, <b>15</b> connections]]></message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug" culprit="bcd"><![CDATA["<b>bcd</b>" reuses <b>altera_jtag_avalon_master</b> "<b>submodules/bcd_master_0</b>"]]></message>
+   <message level="Debug" culprit="bcd"><![CDATA["<b>bcd</b>" reuses <b>BCD_IO</b> "<b>submodules/BCD_Avalon_Top</b>"]]></message>
+   <message level="Debug" culprit="bcd"><![CDATA["<b>bcd</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"]]></message>
+   <message level="Debug" culprit="bcd"><![CDATA["<b>bcd</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"]]></message>
+   <message level="Debug" culprit="bcd"><![CDATA["<b>bcd</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="bcd"><![CDATA["<b>bcd</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 5 starting:altera_jtag_avalon_master "submodules/bcd_master_0"</message>
+   <message level="Debug">Transform: PipelineBridgeSwap</message>
+   <message level="Info" culprit="pipeline_bridge_swap_transform"><![CDATA[After transform: <b>10</b> modules, <b>24</b> connections]]></message>
+   <message level="Debug">Transform: ClockCrossingBridgeSwap</message>
+   <message level="Debug">Transform: QsysBetaIPSwap</message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Info">No custom instruction connections, skipping transform </message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: TranslatorTransform</message>
+   <message level="Info">No Avalon connections, skipping transform </message>
+   <message level="Info" culprit="merlin_translator_transform"><![CDATA[After transform: <b>10</b> modules, <b>24</b> connections]]></message>
+   <message level="Debug">Transform: IDPadTransform</message>
+   <message level="Debug">Transform: DomainTransform</message>
+   <message level="Debug">Transform: RouterTransform</message>
+   <message level="Debug">Transform: TrafficLimiterTransform</message>
+   <message level="Debug">Transform: BurstTransform</message>
+   <message level="Debug">Transform: CombinedWidthTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Info" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>11</b> modules, <b>26</b> connections]]></message>
+   <message level="Debug">Transform: NetworkToSwitchTransform</message>
+   <message level="Debug">Transform: WidthTransform</message>
+   <message level="Debug">Transform: RouterTableTransform</message>
+   <message level="Debug">Transform: ClockCrossingTransform</message>
+   <message level="Debug">Transform: TrafficLimiterUpdateTransform</message>
+   <message level="Info" culprit="merlin_mm_transform"><![CDATA[After transform: <b>11</b> modules, <b>26</b> connections]]></message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_jtag_dc_streaming</b> "<b>submodules/altera_avalon_st_jtag_interface</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>timing_adapter</b> "<b>submodules/bcd_master_0_timing_adt</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_avalon_st_bytes_to_packets</b> "<b>submodules/altera_avalon_st_bytes_to_packets</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_avalon_st_packets_to_bytes</b> "<b>submodules/altera_avalon_st_packets_to_bytes</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_avalon_packets_to_master</b> "<b>submodules/altera_avalon_packets_to_master</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>channel_adapter</b> "<b>submodules/bcd_master_0_b2p_adapter</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>channel_adapter</b> "<b>submodules/bcd_master_0_p2b_adapter</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Info" culprit="master_0"><![CDATA["<b>bcd</b>" instantiated <b>altera_jtag_avalon_master</b> "<b>master_0</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 8 starting:altera_jtag_dc_streaming "submodules/altera_avalon_st_jtag_interface"</message>
+   <message level="Info" culprit="jtag_phy_embedded_in_jtag_master"><![CDATA["<b>master_0</b>" instantiated <b>altera_jtag_dc_streaming</b> "<b>jtag_phy_embedded_in_jtag_master</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 7 starting:timing_adapter "submodules/bcd_master_0_timing_adt"</message>
+   <message level="Info" culprit="timing_adt">Starting generation. </message>
+   <message level="Info" culprit="timing_adt"><![CDATA["<b>master_0</b>" instantiated <b>timing_adapter</b> "<b>timing_adt</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 6 starting:altera_avalon_sc_fifo "submodules/altera_avalon_sc_fifo"</message>
+   <message level="Info" culprit="fifo"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_sc_fifo</b> "<b>fifo</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 5 starting:altera_avalon_st_bytes_to_packets "submodules/altera_avalon_st_bytes_to_packets"</message>
+   <message level="Info" culprit="b2p"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_st_bytes_to_packets</b> "<b>b2p</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 4 starting:altera_avalon_st_packets_to_bytes "submodules/altera_avalon_st_packets_to_bytes"</message>
+   <message level="Info" culprit="p2b"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_st_packets_to_bytes</b> "<b>p2b</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 3 starting:altera_avalon_packets_to_master "submodules/altera_avalon_packets_to_master"</message>
+   <message level="Info" culprit="transacto"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_packets_to_master</b> "<b>transacto</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 2 starting:channel_adapter "submodules/bcd_master_0_b2p_adapter"</message>
+   <message level="Info" culprit="b2p_adapter">Starting generation. </message>
+   <message level="Info" culprit="b2p_adapter"><![CDATA["<b>master_0</b>" instantiated <b>channel_adapter</b> "<b>b2p_adapter</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 1 starting:channel_adapter "submodules/bcd_master_0_p2b_adapter"</message>
+   <message level="Info" culprit="p2b_adapter">Starting generation. </message>
+   <message level="Info" culprit="p2b_adapter"><![CDATA["<b>master_0</b>" instantiated <b>channel_adapter</b> "<b>p2b_adapter</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 10 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>bcd</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 13 starting:BCD_IO "submodules/BCD_Avalon_Top"</message>
+   <message level="Info" culprit="BCD_IO"><![CDATA["<b>bcd</b>" instantiated <b>BCD_IO</b> "<b>BCD_IO</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 12 starting:altera_merlin_master_translator "submodules/altera_merlin_master_translator"</message>
+   <message level="Info" culprit="master_0_master_translator"><![CDATA["<b>bcd</b>" instantiated <b>altera_merlin_master_translator</b> "<b>master_0_master_translator</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 11 starting:altera_merlin_slave_translator "submodules/altera_merlin_slave_translator"</message>
+   <message level="Info" culprit="BCD_IO_avalon_slave_translator"><![CDATA["<b>bcd</b>" instantiated <b>altera_merlin_slave_translator</b> "<b>BCD_IO_avalon_slave_translator</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 10 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>bcd</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_jtag_avalon_master:13.0:AUTO_DEVICE=EP2C8Q208C8,AUTO_DEVICE_FAMILY=Cyclone II,COMPONENT_CLOCK=0,FAST_VER=0,FIFO_DEPTHS=2,PLI_PORT=50000,USE_PLI=0(altera_clock_bridge:13.0:DERIVED_CLOCK_RATE=0,EXPLICIT_CLOCK_RATE=0,NUM_CLOCK_OUTPUTS=1)(altera_reset_bridge:13.0:ACTIVE_LOW_RESET=0,AUTO_CLK_CLOCK_RATE=-1,NUM_RESET_OUTPUTS=1,SYNCHRONOUS_EDGES=none)(altera_jtag_dc_streaming:13.0:AUTO_DEVICE_FAMILY=Cyclone II,COMPONENT_CLOCK=0,DOWNSTREAM_FIFO_SIZE=64,FABRIC=2.0,MGMT_CHANNEL_WIDTH=-1,PLI_PORT=50000,PURPOSE=1,UPSTREAM_FIFO_SIZE=0,USE_DOWNSTREAM_READY=0,USE_PLI=0)(timing_adapter:13.0:generationLanguage=VERILOG,inBitsPerSymbol=8,inChannelWidth=0,inErrorDescriptor=,inErrorWidth=0,inMaxChannel=0,inReadyLatency=0,inSymbolsPerBeat=1,inUseEmpty=false,inUseEmptyPort=NO,inUsePackets=false,inUseReady=false,inUseValid=true,moduleName=,outReadyLatency=0,outUseReady=true,outUseValid=true)(altera_avalon_sc_fifo:13.0:AUTO_DEVICE_FAMILY=Cyclone II,BITS_PER_SYMBOL=8,CHANNEL_WIDTH=0,EMPTY_LATENCY=3,ENABLE_EXPLICIT_MAXCHANNEL=false,ERROR_WIDTH=0,EXPLICIT_MAXCHANNEL=0,FIFO_DEPTH=64,SYMBOLS_PER_BEAT=1,USE_ALMOST_EMPTY_IF=0,USE_ALMOST_FULL_IF=0,USE_FILL_LEVEL=0,USE_MEMORY_BLOCKS=1,USE_PACKETS=0,USE_STORE_FORWARD=0)(altera_avalon_st_bytes_to_packets:11.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone II,CHANNEL_WIDTH=8,CHANNEL_WIDTH_DERIVED=8,ENCODING=0)(altera_avalon_st_packets_to_bytes:11.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone II,CHANNEL_WIDTH=8,CHANNEL_WIDTH_DERIVED=8,ENCODING=0)(altera_avalon_packets_to_master:13.0:AUTO_DEVICE_FAMILY=Cyclone II,EXPORT_MASTER_SIGNALS=0,FAST_VER=0,FIFO_DEPTHS=2,FIFO_WIDTHU=1)(channel_adapter:13.0:generationLanguage=VERILOG,inBitsPerSymbol=8,inChannelWidth=8,inErrorDescriptor=,inErrorWidth=0,inMaxChannel=255,inReadyLatency=0,inSymbolsPerBeat=1,inUseEmpty=false,inUseEmptyPort=AUTO,inUsePackets=true,inUseReady=true,moduleName=,outChannelWidth=0,outMaxChannel=0)(channel_adapter:13.0:generationLanguage=VERILOG,inBitsPerSymbol=8,inChannelWidth=0,inErrorDescriptor=,inErrorWidth=0,inMaxChannel=0,inReadyLatency=0,inSymbolsPerBeat=1,inUseEmpty=false,inUseEmptyPort=AUTO,inUsePackets=true,inUseReady=true,moduleName=,outChannelWidth=8,outMaxChannel=255)(clock:13.0:)(clock:13.0:)(clock:13.0:)(clock:13.0:)(clock:13.0:)(clock:13.0:)(clock:13.0:)(clock:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(reset:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)(avalon_streaming:13.0:)"
+   instancePathKey="bcd:.:master_0"
+   kind="altera_jtag_avalon_master"
+   version="13.0"
+   name="bcd_master_0">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="AUTO_DEVICE" value="EP2C8Q208C8" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="COMPONENT_CLOCK" value="0" />
+  <parameter name="USE_PLI" value="0" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_jtag_interface.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_jtag_dc_streaming.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_jtag_sld_node.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_jtag_streaming.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_pli_streaming.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_clock_crosser.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_pipeline_base.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_idle_remover.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_idle_inserter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_jtag_interface.sdc"
+       type="SDC"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0_timing_adt.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_sc_fifo.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_bytes_to_packets.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_packets_to_bytes.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_packets_to_master.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0_b2p_adapter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0_p2b_adapter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_jtag_avalon_master/altera_jtag_avalon_master_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_avalon_st_jtag_interface_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_avalon_st_jtag_interface.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_jtag_dc_streaming.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_jtag_sld_node.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_jtag_streaming.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_pli_streaming.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/avalon_st/altera_avalon_st_handshake_clock_crosser/altera_avalon_st_clock_crosser.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/avalon_st/altera_avalon_st_pipeline_stage/altera_avalon_st_pipeline_base.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_idle_remover/altera_avalon_st_idle_remover.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_idle_inserter/altera_avalon_st_idle_inserter.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_avalon_st_jtag_interface.sdc"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sc_fifo/altera_avalon_sc_fifo_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sc_fifo/altera_avalon_sc_fifo.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_bytes_to_packets/altera_avalon_st_bytes_to_packets_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_bytes_to_packets/altera_avalon_st_bytes_to_packets.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_packets_to_bytes/altera_avalon_st_packets_to_bytes_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_packets_to_bytes/altera_avalon_st_packets_to_bytes.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_packets_to_master/altera_avalon_packets_to_master_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_packets_to_master/altera_avalon_packets_to_master.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl"
+       attributes="" />
+  </childSourceFiles>
+  <instantiator instantiator="bcd" as="master_0" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 5 starting:altera_jtag_avalon_master "submodules/bcd_master_0"</message>
+   <message level="Debug">Transform: PipelineBridgeSwap</message>
+   <message level="Info" culprit="pipeline_bridge_swap_transform"><![CDATA[After transform: <b>10</b> modules, <b>24</b> connections]]></message>
+   <message level="Debug">Transform: ClockCrossingBridgeSwap</message>
+   <message level="Debug">Transform: QsysBetaIPSwap</message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Info">No custom instruction connections, skipping transform </message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: TranslatorTransform</message>
+   <message level="Info">No Avalon connections, skipping transform </message>
+   <message level="Info" culprit="merlin_translator_transform"><![CDATA[After transform: <b>10</b> modules, <b>24</b> connections]]></message>
+   <message level="Debug">Transform: IDPadTransform</message>
+   <message level="Debug">Transform: DomainTransform</message>
+   <message level="Debug">Transform: RouterTransform</message>
+   <message level="Debug">Transform: TrafficLimiterTransform</message>
+   <message level="Debug">Transform: BurstTransform</message>
+   <message level="Debug">Transform: CombinedWidthTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Info" culprit="reset_adaptation_transform"><![CDATA[After transform: <b>11</b> modules, <b>26</b> connections]]></message>
+   <message level="Debug">Transform: NetworkToSwitchTransform</message>
+   <message level="Debug">Transform: WidthTransform</message>
+   <message level="Debug">Transform: RouterTableTransform</message>
+   <message level="Debug">Transform: ClockCrossingTransform</message>
+   <message level="Debug">Transform: TrafficLimiterUpdateTransform</message>
+   <message level="Info" culprit="merlin_mm_transform"><![CDATA[After transform: <b>11</b> modules, <b>26</b> connections]]></message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_jtag_dc_streaming</b> "<b>submodules/altera_avalon_st_jtag_interface</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>timing_adapter</b> "<b>submodules/bcd_master_0_timing_adt</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_avalon_st_bytes_to_packets</b> "<b>submodules/altera_avalon_st_bytes_to_packets</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_avalon_st_packets_to_bytes</b> "<b>submodules/altera_avalon_st_packets_to_bytes</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_avalon_packets_to_master</b> "<b>submodules/altera_avalon_packets_to_master</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>channel_adapter</b> "<b>submodules/bcd_master_0_b2p_adapter</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>channel_adapter</b> "<b>submodules/bcd_master_0_p2b_adapter</b>"]]></message>
+   <message level="Debug" culprit="master_0"><![CDATA["<b>master_0</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
+   <message level="Info" culprit="master_0"><![CDATA["<b>bcd</b>" instantiated <b>altera_jtag_avalon_master</b> "<b>master_0</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 8 starting:altera_jtag_dc_streaming "submodules/altera_avalon_st_jtag_interface"</message>
+   <message level="Info" culprit="jtag_phy_embedded_in_jtag_master"><![CDATA["<b>master_0</b>" instantiated <b>altera_jtag_dc_streaming</b> "<b>jtag_phy_embedded_in_jtag_master</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 7 starting:timing_adapter "submodules/bcd_master_0_timing_adt"</message>
+   <message level="Info" culprit="timing_adt">Starting generation. </message>
+   <message level="Info" culprit="timing_adt"><![CDATA["<b>master_0</b>" instantiated <b>timing_adapter</b> "<b>timing_adt</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 6 starting:altera_avalon_sc_fifo "submodules/altera_avalon_sc_fifo"</message>
+   <message level="Info" culprit="fifo"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_sc_fifo</b> "<b>fifo</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 5 starting:altera_avalon_st_bytes_to_packets "submodules/altera_avalon_st_bytes_to_packets"</message>
+   <message level="Info" culprit="b2p"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_st_bytes_to_packets</b> "<b>b2p</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 4 starting:altera_avalon_st_packets_to_bytes "submodules/altera_avalon_st_packets_to_bytes"</message>
+   <message level="Info" culprit="p2b"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_st_packets_to_bytes</b> "<b>p2b</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 3 starting:altera_avalon_packets_to_master "submodules/altera_avalon_packets_to_master"</message>
+   <message level="Info" culprit="transacto"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_packets_to_master</b> "<b>transacto</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 2 starting:channel_adapter "submodules/bcd_master_0_b2p_adapter"</message>
+   <message level="Info" culprit="b2p_adapter">Starting generation. </message>
+   <message level="Info" culprit="b2p_adapter"><![CDATA["<b>master_0</b>" instantiated <b>channel_adapter</b> "<b>b2p_adapter</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 1 starting:channel_adapter "submodules/bcd_master_0_p2b_adapter"</message>
+   <message level="Info" culprit="p2b_adapter">Starting generation. </message>
+   <message level="Info" culprit="p2b_adapter"><![CDATA["<b>master_0</b>" instantiated <b>channel_adapter</b> "<b>p2b_adapter</b>"]]></message>
+   <message level="Debug" culprit="bcd">queue size: 10 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>bcd</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="BCD_IO:1.0:AUTO_CLOCK_CLOCK_RATE=50000000"
+   instancePathKey="bcd:.:BCD_IO"
+   kind="BCD_IO"
+   version="1.0"
+   name="BCD_Avalon_Top">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="50000000" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/BCD_Avalon_Top.vhd"
+       type="VHDL"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/BCD_digit.vhd"
+       type="VHDL"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/BCD_top.vhd"
+       type="VHDL"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file path="D:/Altera/Projects/BCD/BCD_IO_hw.tcl" attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd" as="BCD_IO" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 13 starting:BCD_IO "submodules/BCD_Avalon_Top"</message>
+   <message level="Info" culprit="BCD_IO"><![CDATA["<b>bcd</b>" instantiated <b>BCD_IO</b> "<b>BCD_IO</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_master_translator:13.0:AUTO_CLK_CLOCK_RATE=-1,AV_ADDRESSGROUP=0,AV_ADDRESS_SYMBOLS=1,AV_ADDRESS_W=32,AV_ALWAYSBURSTMAXBURST=0,AV_BITS_PER_SYMBOL=8,AV_BURSTBOUNDARIES=0,AV_BURSTCOUNT_SYMBOLS=0,AV_BURSTCOUNT_W=1,AV_BYTEENABLE_W=4,AV_CONSTANT_BURST_BEHAVIOR=0,AV_DATA_HOLD=0,AV_DATA_W=32,AV_INTERLEAVEBURSTS=0,AV_ISBIGENDIAN=0,AV_LINEWRAPBURSTS=0,AV_MAX_PENDING_READ_TRANSACTIONS=64,AV_READLATENCY=0,AV_READ_WAIT=1,AV_REGISTERINCOMINGSIGNALS=0,AV_REGISTEROUTGOINGSIGNALS=0,AV_SETUP_WAIT=0,AV_SYMBOLS_PER_WORD=4,AV_WRITE_WAIT=0,UAV_ADDRESSGROUP=0,UAV_ADDRESS_W=32,UAV_BURSTCOUNT_W=3,UAV_CONSTANT_BURST_BEHAVIOR=0,USE_ADDRESS=1,USE_BEGINBURSTTRANSFER=0,USE_BEGINTRANSFER=0,USE_BURSTCOUNT=0,USE_BYTEENABLE=1,USE_CHIPSELECT=0,USE_CLKEN=0,USE_DEBUGACCESS=0,USE_LOCK=0,USE_READ=1,USE_READDATA=1,USE_READDATAVALID=1,USE_READRESPONSE=0,USE_WAITREQUEST=1,USE_WRITE=1,USE_WRITEDATA=1,USE_WRITERESPONSE=0"
+   instancePathKey="bcd:.:master_0_master_translator"
+   kind="altera_merlin_master_translator"
+   version="13.0"
+   name="altera_merlin_master_translator">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_merlin_master_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/merlin/altera_merlin_master_translator/altera_merlin_master_translator_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd" as="master_0_master_translator" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 12 starting:altera_merlin_master_translator "submodules/altera_merlin_master_translator"</message>
+   <message level="Info" culprit="master_0_master_translator"><![CDATA["<b>bcd</b>" instantiated <b>altera_merlin_master_translator</b> "<b>master_0_master_translator</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_merlin_slave_translator:13.0:AV_ADDRESSGROUP=0,AV_ADDRESS_SYMBOLS=0,AV_ADDRESS_W=3,AV_ALWAYSBURSTMAXBURST=0,AV_BITS_PER_SYMBOL=8,AV_BURSTBOUNDARIES=0,AV_BURSTCOUNT_SYMBOLS=0,AV_BURSTCOUNT_W=1,AV_BYTEENABLE_W=4,AV_CONSTANT_BURST_BEHAVIOR=0,AV_DATA_HOLD=0,AV_DATA_HOLD_CYCLES=0,AV_DATA_W=32,AV_INTERLEAVEBURSTS=0,AV_ISBIGENDIAN=0,AV_LINEWRAPBURSTS=0,AV_MAX_PENDING_READ_TRANSACTIONS=1,AV_MAX_PENDING_WRITE_TRANSACTIONS=0,AV_READLATENCY=0,AV_READ_WAIT=1,AV_READ_WAIT_CYCLES=1,AV_REGISTERINCOMINGSIGNALS=0,AV_REGISTEROUTGOINGSIGNALS=0,AV_REQUIRE_UNALIGNED_ADDRESSES=0,AV_SETUP_WAIT=0,AV_SETUP_WAIT_CYCLES=0,AV_SYMBOLS_PER_WORD=4,AV_TIMING_UNITS=1,AV_WRITE_WAIT=0,AV_WRITE_WAIT_CYCLES=0,CHIPSELECT_THROUGH_READLATENCY=0,CLOCK_RATE=1,UAV_ADDRESSGROUP=0,UAV_ADDRESS_W=32,UAV_BURSTCOUNT_W=3,UAV_BYTEENABLE_W=4,UAV_CONSTANT_BURST_BEHAVIOR=0,UAV_DATA_W=32,USE_ADDRESS=1,USE_AV_CLKEN=0,USE_BEGINBURSTTRANSFER=0,USE_BEGINTRANSFER=0,USE_BURSTCOUNT=0,USE_BYTEENABLE=0,USE_CHIPSELECT=0,USE_DEBUGACCESS=0,USE_LOCK=0,USE_OUTPUTENABLE=0,USE_READ=1,USE_READDATA=1,USE_READDATAVALID=0,USE_READRESPONSE=0,USE_UAV_CLKEN=0,USE_WAITREQUEST=1,USE_WRITE=1,USE_WRITEBYTEENABLE=0,USE_WRITEDATA=1,USE_WRITERESPONSE=0"
+   instancePathKey="bcd:.:BCD_IO_avalon_slave_translator"
+   kind="altera_merlin_slave_translator"
+   version="13.0"
+   name="altera_merlin_slave_translator">
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_merlin_slave_translator.sv"
+       type="SYSTEM_VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/merlin/altera_merlin_slave_translator/altera_merlin_slave_translator_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd" as="BCD_IO_avalon_slave_translator" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 11 starting:altera_merlin_slave_translator "submodules/altera_merlin_slave_translator"</message>
+   <message level="Info" culprit="BCD_IO_avalon_slave_translator"><![CDATA["<b>bcd</b>" instantiated <b>altera_merlin_slave_translator</b> "<b>BCD_IO_avalon_slave_translator</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_reset_controller:13.0:AUTO_CLK_CLOCK_RATE=-1,NUM_RESET_INPUTS=1,OUTPUT_RESET_SYNC_EDGES=deassert,RESET_REQUEST_PRESENT=0,SYNC_DEPTH=2"
+   instancePathKey="bcd:.:rst_controller"
+   kind="altera_reset_controller"
+   version="13.0"
+   name="altera_reset_controller">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_reset_controller.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_reset_synchronizer.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_reset_controller.sdc"
+       type="SDC"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/merlin/altera_reset_controller/altera_reset_controller_hw.tcl"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd" as="rst_controller,rst_controller_001" />
+  <instantiator instantiator="bcd_master_0" as="rst_controller" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 10 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
+   <message level="Info" culprit="rst_controller"><![CDATA["<b>bcd</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_jtag_dc_streaming:13.0:AUTO_DEVICE_FAMILY=Cyclone II,COMPONENT_CLOCK=0,DOWNSTREAM_FIFO_SIZE=64,FABRIC=2.0,MGMT_CHANNEL_WIDTH=-1,PLI_PORT=50000,PURPOSE=1,UPSTREAM_FIFO_SIZE=0,USE_DOWNSTREAM_READY=0,USE_PLI=0"
+   instancePathKey="bcd:.:master_0:.:jtag_phy_embedded_in_jtag_master"
+   kind="altera_jtag_dc_streaming"
+   version="13.0"
+   name="altera_avalon_st_jtag_interface">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_jtag_interface.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_jtag_dc_streaming.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_jtag_sld_node.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_jtag_streaming.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_pli_streaming.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_clock_crosser.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_pipeline_base.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_idle_remover.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_idle_inserter.v"
+       type="VERILOG"
+       attributes="" />
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_jtag_interface.sdc"
+       type="SDC"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_avalon_st_jtag_interface_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_avalon_st_jtag_interface.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_jtag_dc_streaming.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_jtag_sld_node.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_jtag_streaming.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_pli_streaming.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/avalon_st/altera_avalon_st_handshake_clock_crosser/altera_avalon_st_clock_crosser.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/avalon_st/altera_avalon_st_pipeline_stage/altera_avalon_st_pipeline_base.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_idle_remover/altera_avalon_st_idle_remover.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_idle_inserter/altera_avalon_st_idle_inserter.v"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_jtag_phy/altera_avalon_st_jtag_interface.sdc"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd_master_0" as="jtag_phy_embedded_in_jtag_master" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 8 starting:altera_jtag_dc_streaming "submodules/altera_avalon_st_jtag_interface"</message>
+   <message level="Info" culprit="jtag_phy_embedded_in_jtag_master"><![CDATA["<b>master_0</b>" instantiated <b>altera_jtag_dc_streaming</b> "<b>jtag_phy_embedded_in_jtag_master</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="timing_adapter:13.0:generationLanguage=VERILOG,inBitsPerSymbol=8,inChannelWidth=0,inErrorDescriptor=,inErrorWidth=0,inMaxChannel=0,inReadyLatency=0,inSymbolsPerBeat=1,inUseEmpty=false,inUseEmptyPort=NO,inUsePackets=false,inUseReady=false,inUseValid=true,moduleName=,outReadyLatency=0,outUseReady=true,outUseValid=true"
+   instancePathKey="bcd:.:master_0:.:timing_adt"
+   kind="timing_adapter"
+   version="13.0"
+   name="bcd_master_0_timing_adt">
+  <parameter name="inReadyLatency" value="0" />
+  <parameter name="inUseValid" value="true" />
+  <parameter name="moduleName" value="" />
+  <parameter name="inChannelWidth" value="0" />
+  <parameter name="inUseReady" value="false" />
+  <parameter name="inErrorDescriptor" value="" />
+  <parameter name="inUseEmptyPort" value="NO" />
+  <parameter name="outUseReady" value="true" />
+  <parameter name="outUseValid" value="true" />
+  <parameter name="inSymbolsPerBeat" value="1" />
+  <parameter name="inBitsPerSymbol" value="8" />
+  <parameter name="inUseEmpty" value="false" />
+  <parameter name="generationLanguage" value="VERILOG" />
+  <parameter name="inMaxChannel" value="0" />
+  <parameter name="outReadyLatency" value="0" />
+  <parameter name="inErrorWidth" value="0" />
+  <parameter name="inUsePackets" value="false" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0_timing_adt.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles/>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd_master_0" as="timing_adt" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 7 starting:timing_adapter "submodules/bcd_master_0_timing_adt"</message>
+   <message level="Info" culprit="timing_adt">Starting generation. </message>
+   <message level="Info" culprit="timing_adt"><![CDATA["<b>master_0</b>" instantiated <b>timing_adapter</b> "<b>timing_adt</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_sc_fifo:13.0:AUTO_DEVICE_FAMILY=Cyclone II,BITS_PER_SYMBOL=8,CHANNEL_WIDTH=0,EMPTY_LATENCY=3,ENABLE_EXPLICIT_MAXCHANNEL=false,ERROR_WIDTH=0,EXPLICIT_MAXCHANNEL=0,FIFO_DEPTH=64,SYMBOLS_PER_BEAT=1,USE_ALMOST_EMPTY_IF=0,USE_ALMOST_FULL_IF=0,USE_FILL_LEVEL=0,USE_MEMORY_BLOCKS=1,USE_PACKETS=0,USE_STORE_FORWARD=0"
+   instancePathKey="bcd:.:master_0:.:fifo"
+   kind="altera_avalon_sc_fifo"
+   version="13.0"
+   name="altera_avalon_sc_fifo">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_sc_fifo.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sc_fifo/altera_avalon_sc_fifo_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_sc_fifo/altera_avalon_sc_fifo.v"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd_master_0" as="fifo" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 6 starting:altera_avalon_sc_fifo "submodules/altera_avalon_sc_fifo"</message>
+   <message level="Info" culprit="fifo"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_sc_fifo</b> "<b>fifo</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_st_bytes_to_packets:11.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone II,CHANNEL_WIDTH=8,CHANNEL_WIDTH_DERIVED=8,ENCODING=0"
+   instancePathKey="bcd:.:master_0:.:b2p"
+   kind="altera_avalon_st_bytes_to_packets"
+   version="11.1"
+   name="altera_avalon_st_bytes_to_packets">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_bytes_to_packets.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_bytes_to_packets/altera_avalon_st_bytes_to_packets_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_bytes_to_packets/altera_avalon_st_bytes_to_packets.v"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd_master_0" as="b2p" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 5 starting:altera_avalon_st_bytes_to_packets "submodules/altera_avalon_st_bytes_to_packets"</message>
+   <message level="Info" culprit="b2p"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_st_bytes_to_packets</b> "<b>b2p</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_st_packets_to_bytes:11.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone II,CHANNEL_WIDTH=8,CHANNEL_WIDTH_DERIVED=8,ENCODING=0"
+   instancePathKey="bcd:.:master_0:.:p2b"
+   kind="altera_avalon_st_packets_to_bytes"
+   version="11.1"
+   name="altera_avalon_st_packets_to_bytes">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_st_packets_to_bytes.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_packets_to_bytes/altera_avalon_st_packets_to_bytes_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_st_packets_to_bytes/altera_avalon_st_packets_to_bytes.v"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd_master_0" as="p2b" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 4 starting:altera_avalon_st_packets_to_bytes "submodules/altera_avalon_st_packets_to_bytes"</message>
+   <message level="Info" culprit="p2b"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_st_packets_to_bytes</b> "<b>p2b</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_avalon_packets_to_master:13.0:AUTO_DEVICE_FAMILY=Cyclone II,EXPORT_MASTER_SIGNALS=0,FAST_VER=0,FIFO_DEPTHS=2,FIFO_WIDTHU=1"
+   instancePathKey="bcd:.:master_0:.:transacto"
+   kind="altera_avalon_packets_to_master"
+   version="13.0"
+   name="altera_avalon_packets_to_master">
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/altera_avalon_packets_to_master.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_packets_to_master/altera_avalon_packets_to_master_hw.tcl"
+       attributes="" />
+   <file
+       path="D:/altera/13.0sp1/ip/altera/sopc_builder_ip/altera_avalon_packets_to_master/altera_avalon_packets_to_master.v"
+       attributes="" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd_master_0" as="transacto" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 3 starting:altera_avalon_packets_to_master "submodules/altera_avalon_packets_to_master"</message>
+   <message level="Info" culprit="transacto"><![CDATA["<b>master_0</b>" instantiated <b>altera_avalon_packets_to_master</b> "<b>transacto</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="channel_adapter:13.0:generationLanguage=VERILOG,inBitsPerSymbol=8,inChannelWidth=8,inErrorDescriptor=,inErrorWidth=0,inMaxChannel=255,inReadyLatency=0,inSymbolsPerBeat=1,inUseEmpty=false,inUseEmptyPort=AUTO,inUsePackets=true,inUseReady=true,moduleName=,outChannelWidth=0,outMaxChannel=0"
+   instancePathKey="bcd:.:master_0:.:b2p_adapter"
+   kind="channel_adapter"
+   version="13.0"
+   name="bcd_master_0_b2p_adapter">
+  <parameter name="outMaxChannel" value="0" />
+  <parameter name="inReadyLatency" value="0" />
+  <parameter name="inChannelWidth" value="8" />
+  <parameter name="moduleName" value="" />
+  <parameter name="inUseReady" value="true" />
+  <parameter name="inErrorDescriptor" value="" />
+  <parameter name="inUseEmptyPort" value="AUTO" />
+  <parameter name="outChannelWidth" value="0" />
+  <parameter name="inSymbolsPerBeat" value="1" />
+  <parameter name="inBitsPerSymbol" value="8" />
+  <parameter name="inUseEmpty" value="false" />
+  <parameter name="generationLanguage" value="VERILOG" />
+  <parameter name="inMaxChannel" value="255" />
+  <parameter name="inErrorWidth" value="0" />
+  <parameter name="inUsePackets" value="true" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0_b2p_adapter.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles/>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd_master_0" as="b2p_adapter" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 2 starting:channel_adapter "submodules/bcd_master_0_b2p_adapter"</message>
+   <message level="Info" culprit="b2p_adapter">Starting generation. </message>
+   <message level="Info" culprit="b2p_adapter"><![CDATA["<b>master_0</b>" instantiated <b>channel_adapter</b> "<b>b2p_adapter</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="channel_adapter:13.0:generationLanguage=VERILOG,inBitsPerSymbol=8,inChannelWidth=0,inErrorDescriptor=,inErrorWidth=0,inMaxChannel=0,inReadyLatency=0,inSymbolsPerBeat=1,inUseEmpty=false,inUseEmptyPort=AUTO,inUsePackets=true,inUseReady=true,moduleName=,outChannelWidth=8,outMaxChannel=255"
+   instancePathKey="bcd:.:master_0:.:p2b_adapter"
+   kind="channel_adapter"
+   version="13.0"
+   name="bcd_master_0_p2b_adapter">
+  <parameter name="outMaxChannel" value="255" />
+  <parameter name="inReadyLatency" value="0" />
+  <parameter name="inChannelWidth" value="0" />
+  <parameter name="moduleName" value="" />
+  <parameter name="inUseReady" value="true" />
+  <parameter name="inErrorDescriptor" value="" />
+  <parameter name="inUseEmptyPort" value="AUTO" />
+  <parameter name="outChannelWidth" value="8" />
+  <parameter name="inSymbolsPerBeat" value="1" />
+  <parameter name="inBitsPerSymbol" value="8" />
+  <parameter name="inUseEmpty" value="false" />
+  <parameter name="generationLanguage" value="VERILOG" />
+  <parameter name="inMaxChannel" value="0" />
+  <parameter name="inErrorWidth" value="0" />
+  <parameter name="inUsePackets" value="true" />
+  <generatedFiles>
+   <file
+       path="D:/Altera/Projects/BCD/db/ip/bcd/submodules/bcd_master_0_p2b_adapter.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles/>
+  <childSourceFiles/>
+  <instantiator instantiator="bcd_master_0" as="p2b_adapter" />
+  <messages>
+   <message level="Debug" culprit="bcd">queue size: 1 starting:channel_adapter "submodules/bcd_master_0_p2b_adapter"</message>
+   <message level="Info" culprit="p2b_adapter">Starting generation. </message>
+   <message level="Info" culprit="p2b_adapter"><![CDATA["<b>master_0</b>" instantiated <b>channel_adapter</b> "<b>p2b_adapter</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

@@ -1,0 +1,51 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Altera/Projects/LCD/sim
+Elcd_driver
+Z1 w1515182926
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8../hdl/LCD_DRIVER.vhd
+Z6 F../hdl/LCD_DRIVER.vhd
+l0
+L6
+VjK5QHEQ[4kDbBh<U;CVPO1
+!s100 0iTUJ3kM_X>F8mZ2bJnoD1
+Z7 OP;C;10.4a;61
+33
+Z8 !s110 1515183240
+!i10b 1
+Z9 !s108 1515183240.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|../hdl/LCD_DRIVER.vhd|
+Z11 !s107 ../hdl/LCD_DRIVER.vhd|
+!i113 1
+Z12 o-2008 -work work -O0
+Z13 tExplicit 1
+Abeh
+R2
+R3
+R4
+Z14 DEx4 work 10 lcd_driver 0 22 jK5QHEQ[4kDbBh<U;CVPO1
+l64
+L26
+Z15 V`;lZJbd3gfA0FR=RaJzHK0
+Z16 !s100 6oYj_G2>9<Nz5]:V:CoZJ2
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13

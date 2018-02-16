@@ -1,0 +1,43 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+-- Designer: Doron Kopit
+-- Title: BCD Controller
+-- Inputs:
+-- Outputs:
+-- 
+
+entity BCD_top is
+generic (
+	nHWdigits : integer :=8;
+)
+port (
+	clk : in std_logic;
+	rstn : in std_logic;
+	number : in std_logic_vector(27 downto 0);
+	
+	digits : out std_logic_vector(nHWdigits-1 downto 0);
+	errorFlag : out std_logic
+);
+end BCD_top;
+
+architecture hier of BCD_top is 
+-- signals
+
+-- maps
+component BCD_digit is
+port (
+	clk : in std_logic;
+	rstn : in std_logic;
+	
+	digin : in std_logic_vector(3 downto 0);
+	digout : out std_logic_vector (6 downto 0)
+);
+end BCD_digit;
+
+begin
+
+
+end hier;
+

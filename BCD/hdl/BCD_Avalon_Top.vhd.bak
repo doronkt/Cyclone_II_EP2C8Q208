@@ -1,0 +1,18 @@
+library IEEE;
+
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity BCD_Avalon_Top is
+port ()
+end BCD_Avalon_Top;
+
+architecture struct of BCD_Avalon_Top is 
+-- signals
+
+-- components
+
+begin
+-- port maps
+
+end struct;

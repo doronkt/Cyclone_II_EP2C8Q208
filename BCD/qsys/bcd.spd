@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="bcd/simulation/submodules/bcd_master_0.vhd"
+   type="VHDL"
+   library="master_0" />
+ <file path="bcd/simulation/bcd.vhd" type="VHDL" />
+ <topLevel name="bcd" />
+ <deviceFamily name="cycloneii" />
+</simPackage>
