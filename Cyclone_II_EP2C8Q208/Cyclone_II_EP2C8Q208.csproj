@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Communication\FProtocol.cs" />
+    <Compile Include="Communication\ISerialComm.cs" />
+    <Compile Include="Communication\RS232.cs" />
     <Compile Include="driver.cs" />
     <Compile Include="DSP\FIR.cs" />
     <Compile Include="DSP\IIR.cs" />
