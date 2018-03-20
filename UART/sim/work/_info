@@ -1,0 +1,272 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Modeltech_pe_edu_10.4a/examples
+Erx_machine
+Z0 w1521517450
+Z1 DPx4 work 8 uart_pkg 0 22 KXXoWDRi8j_[N48lCCGL[2
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dD:/Altera/Projects/UART/sim
+Z6 8../hdl/RX_MACHINE.vhd
+Z7 F../hdl/RX_MACHINE.vhd
+l0
+L19
+Vz]MD=TO5;on8>WASjNd4=2
+!s100 mARdBMk=cYRT5fK5C@3Xc1
+Z8 OP;C;10.4a;61
+33
+Z9 !s110 1521521429
+!i10b 1
+Z10 !s108 1521521429.000000
+Z11 !s90 -reportprogress|300|-2008|../hdl/RX_MACHINE.vhd|
+Z12 !s107 ../hdl/RX_MACHINE.vhd|
+!i113 1
+Z13 o-2008 -O0
+Z14 tExplicit 1
+Arx_arc
+R1
+R2
+R3
+R4
+DEx4 work 10 rx_machine 0 22 z]MD=TO5;on8>WASjNd4=2
+l45
+L37
+V`olaBccNYH3iHK7TeNRCn0
+!s100 f]3DIaHg=QLQFaib?jJ8;3
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Estimulus
+Z15 w1521521420
+R1
+Z16 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R2
+R3
+R4
+R5
+Z17 8D:/Altera/Projects/UART/sim/stimulus.vhd
+Z18 FD:/Altera/Projects/UART/sim/stimulus.vhd
+l0
+L12
+VR0OdDleHTQWzg9[S?zDT_1
+!s100 e^UCC_IPa9T1@0d9z1iC01
+R8
+33
+R9
+!i10b 1
+R10
+Z19 !s90 -reportprogress|300|-2008|D:/Altera/Projects/UART/sim/stimulus.vhd|
+Z20 !s107 D:/Altera/Projects/UART/sim/stimulus.vhd|
+!i113 1
+R13
+R14
+Astim
+R1
+R16
+R2
+R3
+R4
+DEx4 work 8 stimulus 0 22 R0OdDleHTQWzg9[S?zDT_1
+l60
+L37
+Vf;m[<4YWcIbA=a1Zlognb2
+!s100 D4nN:Se6CTYcj3K6i`64^2
+R8
+33
+R9
+!i10b 1
+R10
+R19
+R20
+!i113 1
+R13
+R14
+Etestbench
+Z21 w1521518706
+R1
+R16
+R2
+R3
+R4
+R5
+Z22 8D:/Altera/Projects/UART/sim/testbench.vhd
+Z23 FD:/Altera/Projects/UART/sim/testbench.vhd
+l0
+L11
+VVHjbfgYNYA5BhVfj2:S<@2
+!s100 >_[KE<UZknW;n_[8kUf=j1
+R8
+33
+Z24 !s110 1521521430
+!i10b 1
+Z25 !s108 1521521430.000000
+Z26 !s90 -reportprogress|300|-2008|D:/Altera/Projects/UART/sim/testbench.vhd|
+Z27 !s107 D:/Altera/Projects/UART/sim/testbench.vhd|
+!i113 1
+R13
+R14
+Astruct
+R1
+R16
+R2
+R3
+R4
+Z28 DEx4 work 9 testbench 0 22 VHjbfgYNYA5BhVfj2:S<@2
+l86
+L14
+Z29 VUImBzTRIWN6mn9@>X14J`1
+Z30 !s100 bF3]D46S5F[ATh1Y2`G]]2
+R8
+33
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R13
+R14
+Etx_machine
+Z31 w1521489115
+R1
+R2
+R3
+R4
+R5
+Z32 8../hdl/TX_MACHINE.vhd
+Z33 F../hdl/TX_MACHINE.vhd
+l0
+L19
+VYl`M9<fPVLjZO@4A;oga21
+!s100 DRdV:e4o4ZI^gMzoNo;@93
+R8
+33
+R9
+!i10b 1
+R10
+Z34 !s90 -reportprogress|300|-2008|../hdl/TX_MACHINE.vhd|
+Z35 !s107 ../hdl/TX_MACHINE.vhd|
+!i113 1
+R13
+R14
+Atx_arc
+R1
+R2
+R3
+R4
+DEx4 work 10 tx_machine 0 22 Yl`M9<fPVLjZO@4A;oga21
+l44
+L36
+VMbi13YIUnzc221dQA4]nE2
+!s100 le4J=_bc;f5zo`WIa^@6a2
+R8
+33
+R9
+!i10b 1
+R10
+R34
+R35
+!i113 1
+R13
+R14
+Euart_module
+Z36 w1521518185
+R1
+R2
+R3
+R4
+R5
+Z37 8../hdl/UART_module.vhd
+Z38 F../hdl/UART_module.vhd
+l0
+L18
+VeJNKnNo:H]g@EkC_7k5Wn1
+!s100 jGPd39RnEP?Kj9zZK46d53
+R8
+33
+R9
+!i10b 1
+R10
+Z39 !s90 -reportprogress|300|-2008|../hdl/UART_module.vhd|
+Z40 !s107 ../hdl/UART_module.vhd|
+!i113 1
+R13
+R14
+Abehave
+R1
+R2
+R3
+R4
+DEx4 work 11 uart_module 0 22 eJNKnNo:H]g@EkC_7k5Wn1
+l93
+L45
+VRAS7fRJAle839Ya@i3UCj1
+!s100 PTO?b5M]F4VPXSABFCR4M1
+R8
+33
+R9
+!i10b 1
+R10
+R39
+R40
+!i113 1
+R13
+R14
+Puart_pkg
+R2
+R3
+R4
+Z41 w1520091675
+R5
+Z42 8../hdl/uart_pkg.vhd
+Z43 F../hdl/uart_pkg.vhd
+l0
+L6
+VKXXoWDRi8j_[N48lCCGL[2
+!s100 =W2H[6eVK3X6M=]?W_XOS1
+R8
+33
+b1
+R9
+!i10b 1
+R10
+Z44 !s90 -reportprogress|300|-2008|../hdl/uart_pkg.vhd|
+Z45 !s107 ../hdl/uart_pkg.vhd|
+!i113 1
+R13
+R14
+Bbody
+R1
+R2
+R3
+R4
+l0
+L23
+VkFZPeV?7HcUc>3JgDE6aZ3
+!s100 ]ALRAT0OHTH?;0`0ZHj>F2
+R8
+33
+R9
+!i10b 1
+R10
+R44
+R45
+!i113 1
+R13
+R14
+nbody
