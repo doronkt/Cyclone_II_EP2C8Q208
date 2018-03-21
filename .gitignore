@@ -243,3 +243,28 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+######################### Altera #############################
+#qsys
+*/.qsys_edit/
+*/qsys/*.bsf
+*/qsys/*.cmp
+*/qsys/*.sopcinfo
+*/qsys/*.rpt
+
+#Simulation related
+*/sim/*.mti
+*/sim/*.mpf
+*/sim/work
+
+
+#other auto-generated files
+*/db/
+*/incremental_db/
+*/output_files/*.rpt
+*/output_files/*.done
+*/output_files/*.smsg
+*/output_files/*.summary
+*/output_files/*.jdi
+
+
