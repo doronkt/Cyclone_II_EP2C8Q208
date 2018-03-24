@@ -266,5 +266,8 @@ ModelManifest.xml
 */output_files/*.smsg
 */output_files/*.summary
 */output_files/*.jdi
+*.bak
+*/design_library
+*/test_library
 
 
